@@ -23,7 +23,7 @@ contract DTTest is Test {
         uint256 totalValue = 10.001 ether;
         vm.deal(address(dtToken), totalValue);
         dtToken.split_payment();
-        assertEq(totalValue, address(shareOwner).balance); // assert if some owned all the shares, they'd get a full payment
+        assertEq(totalValue, address(shareOwner).balance); // assert if someone owned all the shares, they'd get a full payment
     }
 
     function testAccessControl() external {
